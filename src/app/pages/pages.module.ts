@@ -1,3 +1,6 @@
+import { FooterModule } from './../shared/components/footer/footer.module';
+import { HeaderModule } from './../core/header/header.module';
+import { MaterialModule } from './../material/material.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -11,7 +14,10 @@ import { PagesComponent } from './pages.component';
   ],
   imports: [
     CommonModule,
-    PagesRoutingModule
+    PagesRoutingModule,
+    MaterialModule,
+    HeaderModule,
+    FooterModule
   ]
 })
 export class PagesModule { }
