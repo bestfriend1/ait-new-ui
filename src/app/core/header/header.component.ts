@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
+  searchBar = false;
   constructor() { }
 
   ngOnInit(): void {
+  }
+  searchBox(){
+    this.searchBar =! this.searchBar;
   }
 
 }

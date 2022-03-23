@@ -1,1 +1,33 @@
+<!--header-area-->
+<div class="header-area">
+   <div class="container">
+    <div class="header-main">
+        <!---logo-->
+        <div class="logo">
+            <img src="./assets/images/image/Component 5 – 2.svg" alt="">
+        </div>
+        <!--menu-area-->
+        <div class="menu-area">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Why Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <!---icon-menu-->
+        <div class="icon-menu">
+            <ul>
+                <li (click)="searchBox()"><i [class]="searchBar?'fa fa-xmark':'fa fa-search'"></i></li>
+                <li class="bars"><i class="fa fa-bars"></i></li>
+            </ul>
+        </div>
 
+        <!---search-box-area-->
+        <div class="search-box-area" [class.search-box-active]="searchBar">
+            <input type="text" value="" placeholder="Search..">
+            <button><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+   </div>
+</div>
