@@ -13,6 +13,10 @@ const routes: Routes = [
       {
         path:"home",
         loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+      },
+      {
+        path:"get-in-touch",
+        loadChildren: () => import('./user/get-in-touch/get-in-touch.module').then(m => m.GetInTouchModule)
       }
     ]
   }
