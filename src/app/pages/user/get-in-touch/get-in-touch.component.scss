@@ -1,4 +1,25 @@
 @import"./../../../../theme/variables";
+.header-area{
+    display: block;
+    background-color: #313132;
+    padding: 15px 10px;
+    box-sizing: border-box;
+}
+.header-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.logo img{
+    width: 50px;
+    height: auto;
+}
+
 .section1{
     display: block;
     width: 100%;

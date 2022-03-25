@@ -1,3 +1,47 @@
+<!--header-area-->
+<div class="header-area">
+    <div class="container" [ngSwitch]="searchBar">
+     <div class="header-main" *ngSwitchCase="false">
+         <!---logo-->
+         <div class="logo">
+             <img src="./assets/images/image/Component 5 – 2.svg" alt="">
+         </div>
+         <!--menu-area-->
+         <div class="menu-area">
+             <ul>
+                 <li><a routerLink="/">Home</a></li>
+                 <li><a (click)="whyUsScroll()">Why Us</a></li>
+                 <li><a (click)="servicesScroll()">Services</a></li>
+                 <li><a routerLink="./../get-in-touch">Contact</a></li>
+             </ul>
+         </div>
+         <!---icon-menu-->
+         <div class="icon-menu">
+             <ul>
+                 <li (click)=" searchBoxShow()"><i [class]="searchBar?'fa fa-xmark':'fa fa-search'"></i></li>
+                 <li class="bars" (click)="slideToggle()"><i class="fa fa-bars"></i></li>
+             </ul>
+         </div>
+     </div>
+      <!---search-box-area-->
+      <div class="search-box-area" [class.search-box-active]="searchBar" *ngSwitchCase="true">
+        <button ><i class="fa fa-search"></i></button>
+        <input type="text" value="" placeholder="Search AIT.com..">
+        <button (click)='searchBoxHide()'><i class="fa fa-xmark"></i></button>
+     </div>
+    </div>
+ </div>
+<!---end--> 
+<!--slide-menu-->
+<div class="overlay" *ngIf="slide == true" (click)="slideToggle()" ></div>
+<div class="slide-menu" [class]="slide?'slide-active':'s'">
+    <ul>
+        <li><a routerLink="/" (click)="slideToggle()">Home</a></li>
+        <li><a (click)="whyUsScroll()" (click)="slideToggle()">Why Us</a></li>
+        <li><a (click)="servicesScroll()" (click)="slideToggle()">Services</a></li>
+        <li><a routerLink="./../get-in-touch" (click)="slideToggle()">Contact</a></li>
+    </ul>
+</div>
 <!--donate-->
 <div class="donate">
     <div class="container">
@@ -19,7 +63,7 @@
     </div>
 </div>
 <!---section1-->
-<div class="section1">
+<div class="section1" #why>
     <div class="container">
         <div class="section1-title">
             <h3>Our Solutions</h3>
@@ -76,7 +120,7 @@
 </div>
 
 <!---section2-->
-<div class="section2">
+<div class="section2" id="services" #services>
     <div class="container">
         <div class="section2-main">
             <div class="section2-left">
